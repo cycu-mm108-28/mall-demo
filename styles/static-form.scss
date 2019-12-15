@@ -1,0 +1,16 @@
+form.static {
+    .hidden-on-static {
+        display: none !important;
+    }
+    input:not(.edit) {
+        border: none;
+        background: transparent;
+        pointer-events: none;
+    }
+}
+
+form:not(.static) {
+    .hidden-when-not-static {
+        display: none !important;
+    }
+}

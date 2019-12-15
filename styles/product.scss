@@ -1,0 +1,12 @@
+@import "./globals.scss";
+
+figure.product {
+    flex: 0 0 auto;
+    > img {
+        @include fixedImage(125px, 125px);
+    }
+    > figcaption {
+        margin-top: 12px;
+        text-align: center;
+    }
+}

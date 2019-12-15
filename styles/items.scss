@@ -1,0 +1,32 @@
+@import "./globals.scss";
+
+ul.items {
+    > li.item {
+        display: flex;
+        flex-direction: row;
+
+        border: 1px solid black;
+        padding: 8px;
+        border-radius: 8px;
+
+        margin-bottom: 16px;
+
+        > * {
+            align-self: center;
+        }
+
+        > img {
+            @include fixedImage(66.67px, 100px);
+            margin-right: 8px;
+        }
+        > .description {
+            line-height: 2rem;
+            font-size: 1rem;
+
+            > .field {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}

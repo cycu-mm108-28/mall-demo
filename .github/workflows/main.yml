@@ -1,0 +1,25 @@
+name: 編譯、整合、發布到 GitHub Pages
+
+on:
+  push:
+    branches: ["master"]
+
+env:
+  NODE_ENV: production
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1.1.0
+        with:
+          version: 12.x
+      - run: npm install
+      - run: npx webpack
+      - name: 發布到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./dist

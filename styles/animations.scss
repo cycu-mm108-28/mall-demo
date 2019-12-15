@@ -1,0 +1,23 @@
+@function twistTransform($tick, $maxTick, $degree) {
+    $magnitude: ($maxTick - $tick) / $maxTick;
+    $deg: $degree * $magnitude;
+
+    @if $tick % 4 % 2 == 0 {
+        @return "";
+    }
+    @if $tick % 4 == 1 {
+        @return "rotate(-#{$deg * $magnitude}deg)";
+    }
+
+    @return "rotate(#{$deg * $magnitude}deg)";
+}
+
+@keyframes twistAndZoom {
+    @for $i from 1 through 28 {
+        $progress: $i * 5%;
+
+        #{$progress} {
+            transform: scale(1 + 0.015 * $i) #{twistTransform($i, 20, 8)};
+        }
+    }
+}

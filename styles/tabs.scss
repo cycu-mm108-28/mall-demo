@@ -1,0 +1,79 @@
+@import "./globals.scss";
+
+$borderStyle: 1px solid rgba(0, 0, 0, 0.5);
+$barHeight: 1.65rem;
+
+.tabs {
+    box-shadow: 8px 16px 12px 4px rgba(0, 0, 0, 0.2);
+
+    > ul.bar {
+        display: flex;
+        flex-direction: row;
+
+        height: $barHeight;
+        text-align: center;
+
+        border: $borderStyle;
+        border-top-left-radius: $tabBarRadius;
+        border-top-right-radius: $tabBarRadius;
+
+        box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+        > li {
+            height: $barHeight;
+            line-height: $barHeight;
+            font-size: 0.85rem;
+
+            flex-grow: 1;
+
+            box-sizing: border-box;
+
+            cursor: pointer;
+
+            &:not(:last-of-type) {
+                border-right: 1px solid gray;
+            }
+
+            &:first-child {
+                border-top-left-radius: $tabBarRadius;
+            }
+
+            &:last-child {
+                border-top-right-radius: $tabBarRadius;
+            }
+        }
+    }
+
+    > .panes {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    > .panes > [data-pane] {
+        width: 0.001px;
+        overflow: hidden;
+    }
+
+    @for $i from 1 through 3 {
+        &[data-active="#{$i}"] > .panes > [data-pane="#{$i}"] {
+            width: 100%;
+            border-left: $borderStyle;
+            border-right: $borderStyle;
+            border-bottom: $borderStyle;
+        }
+
+        &[data-active="#{$i}"] > ul.bar > li:nth-child(#{$i}) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+@mixin active-tab {
+    @for $i from 1 through 3 {
+        .tabs[data-active="#{$i}"] > .panes > [data-pane="#{$i}"] {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+@function stars($amount) {
+    $result: "";
+    @for $i from 1 through $amount {
+        $result: $result fa-content($fa-var-star) " ";
+    }
+    @return $result;
+}
+
+span.ratings {
+    @extend %fa-icon;
+    @extend .far;
+
+    line-height: inherit;
+    font-size: inherit;
+
+    @for $i from 0 through 5 {
+        &[data-rating="#{$i}"]::before {
+            font-weight: 900;
+            color: rgb(253, 204, 13);
+
+            content: stars($i);
+            white-space: pre;
+        }
+
+        &[data-rating="#{$i}"]::after {
+            font-weight: 400;
+
+            content: stars(5 - $i);
+            white-space: pre;
+        }
+    }
+}

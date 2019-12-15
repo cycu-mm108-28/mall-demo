@@ -1,0 +1,44 @@
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+
+@import "~reset-css/sass/_reset";
+@import "./globals.scss";
+@import "./form.scss";
+@import "./static-form.scss";
+@import "./tabs.scss";
+@import "./items.scss";
+@import "./ratings.scss";
+
+@import "./product.scss";
+
+@import "./banner.scss";
+@import "./category.scss";
+@import "./member.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+
+body {
+    background: $siteBackground;
+}
+
+.container {
+    max-width: $containerMaxWidth;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.flex-spacer {
+    width: 1px;
+    height: 1px;
+    flex-grow: 10 !important;
+    flex-shrink: 10 !important;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,19 @@
+@import "./globals.scss";
+
+#footer {
+    margin-top: 16px;
+
+    padding: 32px 0 16px 0;
+    text-align: center;
+    background: $footerBackground;
+    color: $footerTextColor;
+
+    > p {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    > p > a {
+        color: inherit;
+    }
+}

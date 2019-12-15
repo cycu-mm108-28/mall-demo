@@ -1,0 +1,57 @@
+form {
+    display: flex;
+    flex-direction: column;
+
+    &:not(.static) > .form-control {
+        height: 3rem;
+    }
+    &:not(.static) input {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    > .form-control {
+        display: flex;
+        flex-direction: row;
+        > * {
+            align-self: center;
+        }
+
+        > label {
+            width: 4.2rem;
+            text-align: right;
+        }
+
+        > label,
+        > input {
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+
+        > input {
+            flex-grow: 1;
+        }
+    }
+
+    > .form-control.stack {
+        height: auto;
+
+        flex-direction: column;
+        flex-grow: 1;
+
+        > label {
+            align-self: flex-start;
+        }
+    }
+
+    .actions {
+        text-align: center;
+        margin-top: 16px;
+    }
+    input[type="submit"],
+    input[type="button"] {
+        margin-right: 8px;
+        padding: 6px 24px;
+        border: 1px solid gray;
+    }
+}

@@ -1,0 +1,38 @@
+@import "./tabs.scss";
+
+#member-area {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 24px auto 0 auto;
+
+    [data-pane] {
+        box-sizing: border-box;
+    }
+    #profile,
+    #orders,
+    #comments {
+        max-height: 700px;
+    }
+
+    #orders,
+    #comments {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #orders .field label,
+    #comments .field label {
+        width: 5.25em;
+        flex: 0 0 5.25em;
+        text-align: right;
+    }
+
+    #comments .items .item > * {
+        align-self: flex-start;
+    }
+}
+
+@include active-tab {
+    padding: 16px 32px;
+}
