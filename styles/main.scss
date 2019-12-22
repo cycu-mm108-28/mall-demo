@@ -9,14 +9,19 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "./tabs.scss";
 @import "./items.scss";
 @import "./ratings.scss";
+@import "./slideshow.scss";
 
-@import "./product.scss";
+@import "./products.scss";
 
 @import "./banner.scss";
+@import "./login.scss";
 @import "./category.scss";
+@import "./product.scss";
 @import "./member.scss";
+@import "./cart.scss";
 @import "./contact.scss";
 @import "./footer.scss";
+@import "./about.scss";
 
 body {
     background: $siteBackground;

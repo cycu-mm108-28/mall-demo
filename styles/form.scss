@@ -31,6 +31,13 @@ form {
         > input {
             flex-grow: 1;
         }
+        > input[type="checkbox"] {
+            flex-grow: 0;
+        }
+        > input[type="checkbox"] + label {
+            margin-left: 4px;
+            text-align: left;
+        }
     }
 
     > .form-control.stack {
@@ -41,6 +48,7 @@ form {
 
         > label {
             align-self: flex-start;
+            width: auto !important;
         }
     }
 
@@ -53,5 +61,10 @@ form {
         margin-right: 8px;
         padding: 6px 24px;
         border: 1px solid gray;
+    }
+
+    form:invalid input[type="submit"],
+    form:invalid input[type="button"] {
+        background-color: rgb(127, 127, 127);
     }
 }

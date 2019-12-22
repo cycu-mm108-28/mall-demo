@@ -1,0 +1,56 @@
+${require('./banner.html')}
+<div class="container">
+    <div id="login_signup" class="tabs" data-active="1">
+        <ul class="bar">
+            <li>註冊會員</li>
+            <li>會員登入</li>
+        </ul>
+        <div class="panes">
+            <div id="signup" data-pane="1">
+                <form method="POST">
+                    <div class="form-control">
+                        <label>姓名：</label>
+                        <input name="name" type="text" placeholder="名字" value="" required>
+                    </div>
+                    <div class="form-control">
+                        <label>信箱：</label>
+                        <input name="email" type="email" placeholder="john.doe@example.com" value="" required>
+                    </div>
+                    <div class="form-control">
+                        <label>密碼：</label>
+                        <input name="password" type="password" placeholder="" value="" required>
+                    </div>
+                    <div class="form-control">
+                        <label>確認密碼：</label>
+                        <input name="confirm" type="password" placeholder="" value="" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="checkbox" name="policy" value="agree" required>
+                        <label>同意隱私政策</label>
+                    </div>
+
+                    <div class="actions">
+                        <input type="submit" value="加入" name="button1" />
+                    </div>
+                </form>
+            </div>
+            <div id="signin" data-pane="2">
+                <form method="POST">
+                    <div class="form-control">
+                        <label>信箱：</label>
+                        <input name="email" type="email" placeholder="john.doe@example.com" value="" required>
+                    </div>
+                    <div class="form-control">
+                        <label>密碼：</label>
+                        <input name="password" type="password" placeholder="" value="" required>
+                    </div>
+                    <div class="actions">
+                        <input type="submit" value="登入" />
+                        <input type="button" value="忘記密碼" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+${require('./footer.html')}

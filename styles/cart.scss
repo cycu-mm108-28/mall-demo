@@ -1,0 +1,52 @@
+#cart {
+    margin-top: 24px;
+
+    li.item > .description {
+        flex: 1 0 auto;
+
+        display: flex;
+        flex-direction: row;
+
+        > *:nth-child(1) {
+            flex: 1 0 auto;
+        }
+        > *:nth-child(2) {
+            flex: 0 0 auto;
+            align-self: center;
+        }
+
+        input[type="submit"] {
+            @extend %fa-icon;
+            @extend .fas;
+
+            font-size: 1rem;
+            width: 2rem;
+            height: 2rem;
+
+            text-align: center;
+
+            margin: 0;
+            padding: 0;
+
+            background: rgb(127, 127, 127);
+            color: white;
+        }
+    }
+}
+
+#checkout {
+    #total {
+        text-align: right;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 4rem;
+    }
+    .form-control > label {
+        width: 8rem;
+    }
+    input[name="payment"] {
+        pointer-events: none;
+    }
+}

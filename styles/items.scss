@@ -26,6 +26,9 @@ ul.items {
             > .field {
                 display: flex;
                 flex-direction: row;
+                > label {
+                    flex: 0 0 auto;
+                }
             }
         }
     }
