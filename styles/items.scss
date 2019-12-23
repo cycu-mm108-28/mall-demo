@@ -16,7 +16,7 @@ ul.items {
         }
 
         > img {
-            @include fixedImage(66.67px, 100px);
+            @include fixedImage(150px / 2, 250px / 2);
             margin-right: 8px;
         }
         > .description {

@@ -3,7 +3,7 @@
 figure.product {
     flex: 0 0 auto;
     > img {
-        @include fixedImage(150px / 1.25, 225px / 1.25);
+        @include fixedImage(150px / 1.25, 250px / 1.25);
     }
     > figcaption {
         margin-top: 12px;

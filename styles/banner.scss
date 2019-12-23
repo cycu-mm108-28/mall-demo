@@ -1,5 +1,17 @@
 @import "./globals.scss";
 
+@mixin bannerLinkStyle {
+    color: inherit;
+    text-decoration: none;
+    transition: 750ms linear;
+    transition-property: color;
+
+    &:hover {
+        color: mix($bannerTextColor, $bannerBackground, 75%);
+        transition: 250ms linear;
+    }
+}
+
 #banner {
     background-color: $bannerBackground;
     color: $bannerTextColor;
@@ -33,15 +45,7 @@
                     border-right: 1px solid $bannerLinkSeparatorColor;
                 }
                 > a {
-                    color: inherit;
-                    text-decoration: none;
-                    transition: 750ms linear;
-                    transition-property: color;
-
-                    &:hover {
-                        color: mix($bannerTextColor, $bannerBackground, 75%);
-                        transition: 250ms linear;
-                    }
+                    @include bannerLinkStyle;
                 }
             }
         }
@@ -50,10 +54,16 @@
         #logout,
         #member {
             margin-right: 12px;
+            > a {
+                @include bannerLinkStyle;
+            }
         }
 
         #cart {
             font-size: 1.25rem;
+            > a {
+                @include bannerLinkStyle;
+            }
         }
     }
 }

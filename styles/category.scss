@@ -23,7 +23,7 @@
 
             counter-reset: leaderboard 0;
 
-            > .product {
+            .product {
                 counter-increment: leaderboard;
                 max-width: 120px;
                 margin-right: 16px;
@@ -110,7 +110,7 @@
             flex-wrap: wrap;
             flex: 1 1 auto;
 
-            > .product {
+            .product {
                 margin-right: 16px;
                 margin-bottom: 16px;
                 width: 150px;

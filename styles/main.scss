@@ -23,6 +23,12 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "./footer.scss";
 @import "./about.scss";
 
+:link,
+:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     background: $siteBackground;
 }
