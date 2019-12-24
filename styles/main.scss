@@ -37,6 +37,12 @@ body {
     max-width: $containerMaxWidth;
     box-sizing: border-box;
     margin: 0 auto;
+    min-height: calc(100vh - 120px - 116px - 32px);
+}
+
+#banner > .container,
+#footer > .container {
+    min-height: unset;
 }
 
 .flex-spacer {

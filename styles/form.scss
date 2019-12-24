@@ -60,7 +60,10 @@ form {
     input[type="button"] {
         margin-right: 8px;
         padding: 6px 24px;
-        border: 1px solid gray;
+
+        background: #bce2e8;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     }
 
     form:invalid input[type="submit"],

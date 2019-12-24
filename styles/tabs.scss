@@ -26,8 +26,6 @@ $barHeight: 1.65rem;
 
             flex-grow: 1;
 
-            box-sizing: border-box;
-
             cursor: pointer;
 
             &:not(:last-of-type) {
@@ -65,7 +63,7 @@ $barHeight: 1.65rem;
         }
 
         &[data-active="#{$i}"] > ul.bar > li:nth-child(#{$i}) {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: #bce2e8;
         }
     }
 }

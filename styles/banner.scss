@@ -16,6 +16,8 @@
     background-color: $bannerBackground;
     color: $bannerTextColor;
 
+    margin-bottom: 16px;
+
     > .container {
         display: flex;
         flex-direction: row;
@@ -52,7 +54,8 @@
 
         #login,
         #logout,
-        #member {
+        #member,
+        #about-link {
             margin-right: 12px;
             > a {
                 @include bannerLinkStyle;

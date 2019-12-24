@@ -13,6 +13,7 @@
             @include fixedImage(300px, 450px);
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
+            object-fit: cover;
         }
         > .description {
             height: 100%;
