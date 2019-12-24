@@ -1,4 +1,4 @@
-import { Modal } from "./Modal";
+import { Map } from "./Map";
 
 for (const tabs of document.querySelectorAll<HTMLElement>(".tabs")) {
     tabs.addEventListener("click", ({ target }) => {
@@ -92,3 +92,8 @@ for (const rating of document.querySelectorAll(".form-control.ratings")) {
         });
     }
 }
+
+document.querySelector("#location")?.addEventListener("click", () => {
+    const map = new Map();
+    map.attach();
+});

@@ -2,6 +2,7 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 
+@import "~leaflet/dist/leaflet.css";
 @import "~reset-css/sass/_reset";
 @import "./globals.scss";
 @import "./form.scss";
@@ -10,6 +11,8 @@ $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "./items.scss";
 @import "./ratings.scss";
 @import "./slideshow.scss";
+@import "./modal.scss";
+@import "./map.scss";
 
 @import "./products.scss";
 
