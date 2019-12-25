@@ -2,7 +2,7 @@ import { Modal } from "./Modal";
 import * as L from "leaflet";
 
 export class Map extends Modal {
-    private map: L.Map
+    private map: L.Map;
 
     constructor() {
         super(`<div class="map"></div>`);
@@ -11,15 +11,14 @@ export class Map extends Modal {
         super.attach();
 
         const accessToken = `pk.eyJ1IjoiaHN1cGVuZ2p1biIsImEiOiJjazNmbHQ0M3YwNmF2M2RwNm4yc2FzMTZiIn0.R7HJViTXUh4pD8HjLxh35A`;
-        const map = this.map = L.map(
-            this.ref.querySelector<HTMLElement>(".map")!,
-            {
-                closePopupOnClick: false,
-                zoomControl: false,
-                zoom: 16,
-                center: [24.9642673, 121.2345867]
-            }
-        ));
+        const map = L.map(this.ref.querySelector<HTMLElement>(".map")!, {
+            closePopupOnClick: false,
+            zoomControl: false,
+            zoom: 16,
+            center: [24.9642673, 121.2345867]
+        });
+        this.map = map;
+
         L.tileLayer(
             "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
             {
@@ -40,7 +39,7 @@ export class Map extends Modal {
             .openOn(map);
     }
     destroy() {
-        this.map.remove()
-        super.destroy()
+        this.map.remove();
+        super.destroy();
     }
 }
