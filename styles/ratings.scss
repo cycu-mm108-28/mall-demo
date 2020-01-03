@@ -3,6 +3,10 @@
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 
 @function stars($amount) {
+    @if $amount == 0 {
+        @return "";
+    }
+
     $result: "";
     @for $i from 1 through $amount {
         $result: $result fa-content($fa-var-star) " ";
@@ -14,7 +18,7 @@ span.ratings {
     @extend %fa-icon;
     @extend .far;
 
-    line-height: inherit;
+    line-height: inherit !important;
     font-size: inherit;
 
     @for $i from 0 through 5 {
