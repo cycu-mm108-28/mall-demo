@@ -1,5 +1,60 @@
 ${require('./banner.html')}
 <div id="category" class="container">
+    <div id="leaderboard">
+        <h1>商品排行榜</h1>
+        <div class="products">
+            <!-- 這個直接用 foreach -->
+            <!-- 編號會自動產生，文字太長會自動被「...」代替 -->
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/36.jpg" />
+                    <figcaption>衣服</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/37.jpg" />
+                    <figcaption>衣服</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/38.jpg" />
+                    <figcaption>衣服</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/39.jpg" />
+                    <figcaption>衣服</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/40.jpg" />
+                    <figcaption>衣服</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/41.jpg" />
+                    <figcaption>褲子</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/42.jpg" />
+                    <figcaption>褲子</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/43.jpg" />
+                    <figcaption>褲子</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
     <div id="browser">
         <nav id="categories">
             <h2>Women</h2>
@@ -12,124 +67,67 @@ ${require('./banner.html')}
                 <li><a href="category.html">外套</a></li>
             </ul>
         </nav>
-        <div class="wrapper">
-            <div id="leaderboard">
-                <h1>商品排行榜</h1>
-                <div class="products">
-                    <!-- 這個直接用 foreach -->
-                    <!-- 編號會自動產生，文字太長會自動被「...」代替 -->
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/36.jpg" />
-                            <figcaption>衣服</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/37.jpg" />
-                            <figcaption>衣服</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/38.jpg" />
-                            <figcaption>衣服</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/39.jpg" />
-                            <figcaption>衣服</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/40.jpg" />
-                            <figcaption>衣服</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/41.jpg" />
-                            <figcaption>褲子</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/42.jpg" />
-                            <figcaption>褲子</figcaption>
-                        </figure>
-                    </a>
-                    <a href="product.html">
-                        <figure class="product">
-                            <img src="images/products/43.jpg" />
-                            <figcaption>褲子</figcaption>
-                        </figure>
-                    </a>
-                </div>
-            </div>
-            <div class="products">
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/36.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/37.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/38.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/39.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/40.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/41.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/42.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/43.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/44.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-                <a href="product.html">
-                    <figure class="product">
-                        <img src="images/products/45.jpg" />
-                        <figcaption>商品名稱</figcaption>
-                    </figure>
-                </a>
-            </div>
+        <div class="products">
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/36.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/37.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/38.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/39.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/40.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/41.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/42.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/43.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/44.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
+            <a href="product.html">
+                <figure class="product">
+                    <img src="images/products/45.jpg" />
+                    <figcaption>商品名稱</figcaption>
+                </figure>
+            </a>
         </div>
     </div>
 </div>
