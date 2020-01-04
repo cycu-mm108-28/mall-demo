@@ -2,77 +2,6 @@
 @import "./animations.scss";
 
 #category {
-    #leaderboard {
-        margin: 16px auto;
-
-        h1 {
-            text-align: center;
-            margin: 16px auto;
-        }
-
-        > .products {
-            padding: 16px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-
-            overflow-x: auto;
-            overflow-y: hidden;
-
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-
-            counter-reset: leaderboard 0;
-
-            .product {
-                counter-increment: leaderboard;
-                max-width: 120px;
-                margin-right: 16px;
-                position: relative;
-
-                > figcaption {
-                    font-size: 1rem;
-                    line-height: 1.25rem;
-
-                    @include ellipsis;
-                }
-
-                &::before {
-                    $badgeSize: 30px;
-
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    left: 0px;
-
-                    // width: $badgeSize;
-                    height: $badgeSize;
-
-                    line-height: $badgeSize;
-                    text-align: center;
-
-                    background: #7d7d7d;
-                    color: white;
-
-                    font-size: 20px;
-
-                    backdrop-filter: blur(1px);
-
-                    content: counter(leaderboard);
-                    z-index: 1;
-                }
-
-                &:last-child::after {
-                    content: "";
-                    position: absolute;
-                    left: 125px;
-                    top: 0px;
-                    width: 16px;
-                    height: 1px;
-                }
-            }
-        }
-    }
-
     #browser {
         display: flex;
         flex-direction: row;
@@ -104,27 +33,105 @@
             }
         }
 
-        > .products {
-            display: flex;
-            flex-wrap: wrap;
-            flex: 1 1 auto;
+        .wrapper {
+            width: calc(100% - 150px - 32px);
 
-            .product {
-                margin-right: 16px;
-                margin-bottom: 16px;
-                width: 150px;
+            #leaderboard {
+                margin: 16px auto;
 
-                > img {
-                    @include fixedImage(150px, 250px);
-                    &:hover {
-                        animation: 1s ease-in forwards twistAndZoom;
+                h1 {
+                    text-align: center;
+                    margin: 16px auto;
+                }
+
+                > .products {
+                    padding: 16px;
+                    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+                    overflow-x: auto;
+                    overflow-y: hidden;
+
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+
+                    counter-reset: leaderboard 0;
+
+                    .product {
+                        counter-increment: leaderboard;
+                        max-width: 120px;
+                        margin-right: 16px;
+                        position: relative;
+
+                        > figcaption {
+                            font-size: 1rem;
+                            line-height: 1.25rem;
+
+                            @include ellipsis;
+                        }
+
+                        &::before {
+                            $badgeSize: 30px;
+
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            left: 0px;
+
+                            // width: $badgeSize;
+                            height: $badgeSize;
+
+                            line-height: $badgeSize;
+                            text-align: center;
+
+                            background: #7d7d7d;
+                            color: white;
+
+                            font-size: 20px;
+
+                            backdrop-filter: blur(1px);
+
+                            content: counter(leaderboard);
+                            z-index: 1;
+                        }
+
+                        &:last-child::after {
+                            content: "";
+                            position: absolute;
+                            left: 125px;
+                            top: 0px;
+                            width: 16px;
+                            height: 1px;
+                        }
+
+                        img {
+                            @include fixedImage(120px, 200px);
+                        }
                     }
                 }
-                > figcaption {
-                    font-size: 1rem;
-                    line-height: 1.25rem;
+            }
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1 1 auto;
 
-                    @include ellipsis;
+                .product {
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+                    width: 150px;
+
+                    > img {
+                        @include fixedImage(150px, 250px);
+                        &:hover {
+                            animation: 1s ease-in forwards twistAndZoom;
+                        }
+                    }
+                    > figcaption {
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+
+                        @include ellipsis;
+                    }
                 }
             }
         }
