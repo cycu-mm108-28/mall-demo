@@ -1,14 +1,14 @@
-const path = require("path");
-const fs = require("fs");
+const path = require("path")
+const fs = require("fs")
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const autoprefixer = require("autoprefixer");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const autoprefixer = require("autoprefixer")
 
 module.exports = {
     entry: ["./src/main.ts", "./styles/main.scss"],
     plugins: [
-        new MiniCssExtractPlugin({ filename: "styles/[name].[hash].css" }),
+        new MiniCssExtractPlugin({ filename: "assets/styles/[name].[hash].css" }),
         ...fs
             .readdirSync(__dirname, "utf8")
             .filter(ones => ones.endsWith(".html"))
@@ -29,7 +29,7 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             // We do this twice because once for the current source layout and once for future output
-                            publicPath: "../"
+                            publicPath: "../../"
                         }
                     },
                     "css-loader",
@@ -45,11 +45,20 @@ module.exports = {
             },
             { test: /\.tsx?$/, loader: "ts-loader" },
             {
-                test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 loader: "file-loader",
                 options: {
                     name: "[contenthash].[ext]",
-                    outputPath: "assets",
+                    outputPath: "assets/images",
+                    esModule: false
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf)$/i,
+                loader: "file-loader",
+                options: {
+                    name: "[contenthash].[ext]",
+                    outputPath: "assets/fonts",
                     esModule: false
                 }
             },
@@ -66,9 +75,9 @@ module.exports = {
     output: {
         publicPath: "",
         path: path.resolve(__dirname, "./dist"),
-        filename: "scripts/[name].[hash].js"
+        filename: "assets/scripts/[name].[hash].js"
     },
     resolve: {
         extensions: [".ts"]
     }
-};
+}
